@@ -5,9 +5,8 @@ from Crypto.Cipher import AES
 
     
 def pad_string(text, block_size=32, padding=' '):
-    """Pads `text` to be `block_size` chars long."""
-    padded = text.ljust(block_size, padding)
-    pruned = padded[:block_size]
+    """Pads `text` so length is a multiple of `block_size`."""
+    padded = text + (block_size - len(text) % block_size) * padding
     return padded
 
 def main():
