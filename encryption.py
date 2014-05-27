@@ -68,11 +68,11 @@ def parse_args():
     parser = argparse.ArgumentParser(
         prog="encryption.py",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-             description=textwrap.dedent("""\
-             Example:
-               cat file | ./encryption.py --encrypt > encrypted.dat
-               cat encrypted.dat | ./encryption.py --decrypt > decrypted.txt
-             """))
+        description=textwrap.dedent("""\
+        Example:
+          cat file | ./encryption.py --encrypt > encrypted.dat
+          cat encrypted.dat | ./encryption.py --decrypt > decrypted.txt
+        """))
     parser.add_argument(
         '-e', '--encrypt', action='store_true',
         help="encrypt given file")
